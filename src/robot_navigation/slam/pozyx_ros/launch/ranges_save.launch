@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<launch>
+    <!-- Launch this file at back car -->
+    <arg name="round" doc="please specify round" />
+    <arg name="veh" doc="please specify veh"/>
+    
+    <node ns="$(arg veh)" name="ranges_save" pkg="pozyx_ros" type="ranges_save.py" output="screen">
+        <param name="veh" value="$(arg veh)" />
+        <param name="round" value="$(arg round)" />
+    </node>
+
+
+</launch>

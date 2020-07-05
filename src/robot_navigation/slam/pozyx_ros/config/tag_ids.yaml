@@ -1,0 +1,54 @@
+---
+husky1:
+  fr: 0x6a25
+  fl: 0x6a57 # using duckiefloat's for temporary
+  br: 0x6a21
+  bl: 0x6a5e
+husky2:
+  fr: 0x6a28 # using duckiefloat's for temporary
+  fl: 0x6727
+  br: 0x6a37
+  bl: 0x670a
+# duckiefloat1: 0x6a57
+# duckiefloat2: 0x6a28
+locobot27_id: 0x6a60
+# pozyx_port:
+#   0x6a25: '233333'
+anchorballs:
+  anchor01: 0x674f
+  anchor02: 0x6742
+  anchor03: 0x6a1c
+  anchor04: 0x6755
+  anchor05: 0x6a22
+  anchor06: 0x6705
+  anchor07: 0x670c
+  anchor08: 0x6a5d
+  anchor09: 0x6a20
+  anchor10: 0x6a27
+  anchor11: 0x6a2f
+  anchor12: 0x6a17
+
+anchorballs_count:
+  anchor01: 1
+  anchor02: 2
+  anchor03: 3
+  anchor04: 4
+  anchor05: 5
+  anchor06: 6
+  anchor07: 1
+  # anchor08: 2
+  anchor09: 2
+  anchor10: 3
+  anchor11: 4
+  anchor12: 5
+  anchor13: 6
+  anchor15: 1
+  anchor16: 2
+  anchor17: 3
+  anchor18: 4
+  anchor19: 5
+  anchor20: 6
+  anchor21: 1
+  anchor22: 2
+  anchor23: 3
+  anchor24: 4

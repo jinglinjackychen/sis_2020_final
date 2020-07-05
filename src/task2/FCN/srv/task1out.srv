@@ -1,0 +1,12 @@
+#Request data
+---
+#Response data
+string info # for mission result
+string list
+sensor_msgs/Image org_image
+sensor_msgs/Image process_image
+sensor_msgs/Image mask
+sensor_msgs/PointCloud2 pc
+float64 angle_dou
+float64 angle_kin
+float64 angle_ku

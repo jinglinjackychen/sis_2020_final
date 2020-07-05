@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<launch>
+    <!-- Launch this file at back car -->
+    <arg name="config_file" default="tag_ids.yaml" />
+    <arg name="freq" default="10"/>
+    <arg name="veh" doc="please specify veh"/>
+    <rosparam command="load" file="$(find pozyx_ros)/config/$(arg config_file)" />
+
+    <node ns="$(arg veh)/back_right" name="$(arg veh)_back_right_tag" pkg="pozyx_ros" type="multi_ranging.py" output="screen">
+        <rosparam param="id_param_name" subst_value="True">"/$(arg veh)/br"</rosparam>
+        <rosparam param="dest_ids_name">"/anchorballs"
+        </rosparam>
+        <rosparam param="ranging_freq" subst_value="True">$(arg freq)</rosparam>
+    </node>
+
+
+</launch>
