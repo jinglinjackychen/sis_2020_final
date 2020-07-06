@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iostream>
 #include <cmath>
+#include <tf/transform_broadcaster.h>
 #include <std_msgs/Header.h>
 #include <std_msgs/Float64.h>
 #include <geometry_msgs/Point.h>
@@ -25,7 +26,8 @@ int main(int argc, char **argv)
 	ros::ServiceClient client_place = nh.serviceClient<place_to_box::data>("place");
 	place_to_box::data pose;
 	std_msgs::Float64 tilt_angle;
-
+	//tf::StampedTransform transform;
+	//static tf::TransformBroadcaster br;
 
 	pose.request.pose.position.x = 0.4;
 	pose.request.pose.position.y = 0.0;
@@ -36,10 +38,12 @@ int main(int argc, char **argv)
 	pose.request.pose.orientation.w = 0.707;
 	pose.request.id = 0;
 
+
 	tilt_angle.data = 0.0;
 
 	for(int i=0;i<20;i++){
 		tilt_publisher.publish(tilt_angle);
+		//br.sendTransform(tf::StampedTransform(david_tf, ros::Time::now(), "base_link", "place_pose"));
 	}
 
 	if(client_place.call(pose)){

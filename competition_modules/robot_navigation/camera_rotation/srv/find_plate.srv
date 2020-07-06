@@ -1,4 +1,0 @@
-int64 tag_id
----
-string result
-geometry_msgs/PoseStamped pose

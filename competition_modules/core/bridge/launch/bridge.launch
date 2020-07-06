@@ -22,11 +22,17 @@
         <param name="bridge_to" value="/tilt/command" />
     </node>
 
-    <node pkg="bridge" type="bridge.py" name="bridge_img_to_pc" args="$(arg wlan0)" output="screen">
+    <!-- <node pkg="bridge" type="bridge.py" name="bridge_tf_to_pc" args="$(arg wlan0)" output="screen">
+        <param name="bridge_type" value="TFMessage" />
+        <param name="bridge_from" value="/tf_static" />
+        <param name="bridge_to" value="/tf_static" />
+    </node> -->
+
+    <!-- <node pkg="bridge" type="bridge.py" name="bridge_img_to_pc" args="$(arg wlan0)" output="screen">
         <param name="bridge_type" value="CompressedImage" />
         <param name="bridge_from" value="/camera/color/image_raw/compressed" />
         <param name="bridge_to" value="/teleop/image/compressed" />
-    </node>
+    </node> -->
     
 
 </launch>
