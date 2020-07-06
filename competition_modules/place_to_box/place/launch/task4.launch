@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<launch>
+  <node pkg="place" type="place_object" name="place_object" output="screen"/>
+</launch>

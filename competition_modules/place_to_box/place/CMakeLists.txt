@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(place)
+project(place_to_box)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -8,6 +8,7 @@ project(place)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  roscpp
   rospy
   geometry_msgs
   message_generation
@@ -204,3 +205,6 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable(to_place_object src/place_object.cpp)
+add_dependencies(to_place_object src/place_object.cpp ${catkin_EXPORTED_TARGETS})
+target_link_libraries(to_place_object ${catkin_LIBRARIES})

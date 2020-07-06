@@ -54,7 +54,7 @@ if [ $# -gt 0 ]; then
 	    --privileged \
 	    --user root \
 	    --runtime nvidia \
-	    -v "/home/$USER/sis_competition_template/competition_modules/:/home/sis/sis_competition_2020/catkin_ws/src/" \
+	    -v "/home/$USER/sis_2020_final/competition_modules/:/home/sis/sis_competition_2020/catkin_ws/src/" \
 	    -v "/etc/localtime:/etc/localtime:ro" \
     	-v "/dev:/dev" \
     	-v "/home/$USER/.bashrc:/home/sis/.bashrc" \
